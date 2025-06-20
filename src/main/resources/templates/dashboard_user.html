@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - PuspaNada</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fefefe;
+            margin: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #D9A25F;
+            color: #fff;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar a.active, .sidebar a:hover {
+            background-color: #BB6A29;
+        }
+
+        .main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar .user-info {
+            background-color: #FAD6A5;
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .highlight {
+            background-color: #f9d9a2;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .highlight h3 {
+            color: #BB6A29;
+            margin-bottom: 10px;
+        }
+
+        .orders {
+            background-color: #fff6ee;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .orders h4 {
+            margin-bottom: 10px;
+            color: #BB6A29;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .order-item span {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>🎵 PuspaNada</h2>
+    <a href="/user/dashboard" class="active">Home</a>
+    <a href="/user/products">Products</a> <!-- Tambahkan link ke products -->
+    <a href="#">Payout</a>
+    <a href="#">Profile</a>
+    <a href="#">Settings</a>
+    <a href="/logout">Log Out</a>
+    <a href="#">Help</a>
+</div>
+
+<div class="main">
+    <div class="topbar">
+        <h1>Welcome Back, Amikatu!</h1>
+        <div class="user-info">
+            <img src="/images/user-profile.png" alt="Profile" width="32" height="32" style="border-radius:50%;">
+            <span>Amikatu</span> | <strong>$20.000</strong> | VIP Member
+        </div>
+    </div>
+
+    <div class="highlight">
+        <h3>Upgrade Your Account to VVIP Member</h3>
+        <p>Boost your rental privileges and indulge in real-time musical gear availability.</p>
+        <button style="padding:10px 20px; border:none; border-radius:20px; background:#d95d17; color:white; font-weight:bold;">Upgrade Now</button>
+    </div>
+
+    <div class="orders">
+        <h4>Latest Order</h4>
+        <div class="order-item">
+            <span>Keyboard and Piano</span>
+            <span>$10/day | Delivered</span>
+        </div>
+        <div class="order-item">
+            <span>Violin</span>
+            <span>$7/day | Delivered</span>
+        </div>
+        <div class="order-item">
+            <span>Drum Set</span>
+            <span>$7/day | Delivered</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register - PuspaNada</title>
+    <style>
+        body {
+            background-color: #fdf7e2;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .register-container {
+            background-color: #fffce9;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+        .register-container img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        .register-container h1 {
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            color: #d95b00;
+            margin-bottom: 20px;
+        }
+        .register-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #e47e00;
+            border-radius: 5px;
+        }
+        .register-container button {
+            background-color: #d95b00;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .register-container button:hover {
+            background-color: #b94d00;
+        }
+    </style>
+</head>
+<body>
+<div class="register-container">
+    <img src="/static/logo.png" alt="Logo PuspaNada">
+    <h1>PuspaNada</h1>
+
+    <form th:action="@{/register}" th:object="${user}" method="post">
+        <input type="text" placeholder="Username" th:field="*{username}" required/>
+        <input type="text" placeholder="Address" th:field="*{address}" required/>
+        <input type="email" placeholder="E-mail" th:field="*{email}" required/>
+        <input type="text" placeholder="Birthplace" th:field="*{birthplace}" required/>
+        <input type="password" placeholder="Password" th:field="*{password}" required/>
+        <button type="submit">REGISTER</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Produk - PuspaNada</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fefefe;
+            margin: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #D9A25F;
+            color: #fff;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar a.active, .sidebar a:hover {
+            background-color: #BB6A29;
+        }
+
+        .main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar .user-info {
+            background-color: #FAD6A5;
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .searchbar {
+            margin: 20px 0;
+        }
+
+        .searchbar input {
+            padding: 10px;
+            width: 60%;
+            border: 2px solid #F79C52;
+            border-radius: 30px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #fff6ee;
+            border-radius: 12px;
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h4 {
+            margin: 10px 0 4px;
+            font-size: 16px;
+        }
+
+        .product-card p {
+            font-size: 12px;
+            color: #555;
+        }
+
+        .price {
+            color: #BB6A29;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>🎵 PuspaNada</h2>
+    <a href="/user/dashboard">Home</a>
+    <a href="/user/products" class="active">Products</a>
+    <a href="#">Payout</a>
+    <a href="#">Profile</a>
+    <a href="#">Settings</a>
+    <a href="/logout">Log Out</a>
+    <a href="#">Help</a>
+</div>
+
+<div class="main">
+    <div class="topbar">
+        <h1>Welcome Back, Amikatu!</h1>
+        <div class="user-info">
+            <img src="/images/user-profile.png" alt="Profile" width="32" height="32" style="border-radius:50%;">
+            <span>Amikatu</span> | <strong>$20.000</strong> | VIP Member
+        </div>
+    </div>
+
+    <div class="searchbar">
+        <input type="text" placeholder="Search instrument...">
+    </div>
+
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="/images/camelan.jpg" alt="Camelan">
+            <h4>Camelan</h4>
+            <p>Percussion Instrument</p>
+            <div class="price">$2/day</div>
+        </div>
+        <div class="product-card">
+            <img src="/images/tambourine.jpg" alt="Tambourine">
+            <h4>Tambourine</h4>
+            <p>Percussion Instrument</p>
+            <div class="price">$2/day</div>
+        </div>
+        <div class="product-card">
+            <img src="/images/harp.jpg" alt="Harp">
+            <h4>Harp</h4>
+            <p>String Instrument</p>
+            <div class="price">$3/day</div>
+        </div>
+        <div class="product-card">
+            <img src="/images/guitar.jpg" alt="Guitar">
+            <h4>Guitar</h4>
+            <p>String Instrument</p>
+            <div class="price">$3/day</div>
+        </div>
+        <div class="product-card">
+            <img src="/images/violin.jpg" alt="Violin">
+            <h4>Violin</h4>
+            <p>String Instrument</p>
+            <div class="price">$3/day</div>
+        </div>
+        <div class="product-card">
+            <img src="/images/trumpet.jpg" alt="Trumpet">
+            <h4>Trumpet</h4>
+            <p>Wind Instrument</p>
+            <div class="price">$2/day</div>
+        </div>
+        <div class="product-card">
+            <img src="/images/djembe.jpg" alt="Djembe">
+            <h4>Drum</h4>
+            <p>Percussion Instrument</p>
+            <div class="price">$2/day</div>
+        </div>
+        <div class="product-card">
+            <img src="/images/angklung.jpg" alt="Angklung">
+            <h4>Angklung</h4>
+            <p>Traditional Instrument</p>
+            <div class="price">$1.5/day</div>
+        </div>
+        <div class="product-card">
+            <img src="/images/piano.jpg" alt="Piano">
+            <h4>Piano</h4>
+            <p>Keyboard Instrument</p>
+            <div class="price">$3/day</div>
+        </div>
+        <div class="product-card">
+            <img src="/images/drumset.jpg" alt="Drum Set">
+            <h4>Drum Set</h4>
+            <p>Percussion Instrument</p>
+            <div class="price">$3/day</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
